@@ -10,68 +10,96 @@
 </head>
 
 <body>
-    <label for="team-select">Select a team:</label>
-    <select id="team-select">
-        <option value="24">Anaheim Ducks</option>
-        <option value="53">Arizona Coyotes</option>
-        <option value="6">Boston Bruins</option>
-        <option value="7">Buffalo Sabres</option>
-        <option value="20">Calgary Flames</option>
-        <option value="12">Carolina Hurricanes</option>
-        <option value="16">Chicago Blackhawks</option>
-        <option value="21">Colorado Avalanche</option>
-        <option value="29">Columbus Blue Jackets</option>
-        <option value="25">Dallas Stars</option>
-        <option value="17">Detroit Red Wings</option>
-        <option value="22">Edmonton Oilers</option>
-        <option value="13">Florida Panthers</option>
-        <option value="26">Los Angeles Kings</option>
-        <option value="30">Minnesota Wild</option>
-        <option value="8">Montreal Canadiens</option>
-        <option value="18">Nashville Predators</option>
-        <option value="1">New Jersey Devils</option>
-        <option value="2">New York Islanders</option>
-        <option value="3">New York Rangers</option>
-        <option value="9">Ottawa Senators</option>
-        <option value="4">Philadelphia Flyers</option>
-        <option value="5">Pittsburgh Penguins</option>
-        <option value="28">San Jose Sharks</option>
-        <option value="19">St Louis Blues</option>
-        <option value="14">Tampa Bay Lightning</option>
-        <option value="10">Toronto Maple Leafs</option>
-        <option value="23">Vancouver Canucks</option>
-        <option value="54">Vegas Golden Knights</option>
-        <option value="15">Washington Capitals</option>
-        <option value="52">Winnipeg Jets</option>
-    </select>
-    <label for="season-select">Season:</label>
-    <select id="season-select">
-        <option value="20192020">19/20</option>
-        <option value="20182019">18/19</option>
-        <option value="20172018">17/18</option>
-        <option value="20162017">16/17</option>
-        <option value="20152016">15/16</option>
-    </select>
-    <button id="add-team">Add Team</button>
-    <label for="sort-by">Sort By:</label>
-    <select id="sort-by">
-        <option value="pts">Points</option>
-        <option value="name">Name</option>
-        <option value="gamesPlayed">Games Played</option>
-        <option value="wins">Wins</option>
-        <option value="losses">Losses</option>
-        <option value="ot">OT</option>
-    </select>
-    <button id="sort-btn">Sort</button>
-    <button id="clear-btn">Clear Table</button>
-    <table id="stats-table" class="table">
-        <th>Team</th>
-        <th>GP</th>
-        <th>W</th>
-        <th>L</th>
-        <th>OT</th>
-        <th>PTS</th>
-    </table>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+        <a class="navbar-brand" href="#">NHL Stats Compare</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Teams <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Players</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <label for="team-select">Select a team:</label>
+                <select id="team-select">
+                    <option value="24">Anaheim Ducks</option>
+                    <option value="53">Arizona Coyotes</option>
+                    <option value="6">Boston Bruins</option>
+                    <option value="7">Buffalo Sabres</option>
+                    <option value="20">Calgary Flames</option>
+                    <option value="12">Carolina Hurricanes</option>
+                    <option value="16">Chicago Blackhawks</option>
+                    <option value="21">Colorado Avalanche</option>
+                    <option value="29">Columbus Blue Jackets</option>
+                    <option value="25">Dallas Stars</option>
+                    <option value="17">Detroit Red Wings</option>
+                    <option value="22">Edmonton Oilers</option>
+                    <option value="13">Florida Panthers</option>
+                    <option value="26">Los Angeles Kings</option>
+                    <option value="30">Minnesota Wild</option>
+                    <option value="8">Montreal Canadiens</option>
+                    <option value="18">Nashville Predators</option>
+                    <option value="1">New Jersey Devils</option>
+                    <option value="2">New York Islanders</option>
+                    <option value="3">New York Rangers</option>
+                    <option value="9">Ottawa Senators</option>
+                    <option value="4">Philadelphia Flyers</option>
+                    <option value="5">Pittsburgh Penguins</option>
+                    <option value="28">San Jose Sharks</option>
+                    <option value="19">St Louis Blues</option>
+                    <option value="14">Tampa Bay Lightning</option>
+                    <option value="10">Toronto Maple Leafs</option>
+                    <option value="23">Vancouver Canucks</option>
+                    <option value="54">Vegas Golden Knights</option>
+                    <option value="15">Washington Capitals</option>
+                    <option value="52">Winnipeg Jets</option>
+                </select>
+                <label for="season-select">Season:</label>
+                <select id="season-select">
+                    <option value="20192020">19/20</option>
+                    <option value="20182019">18/19</option>
+                    <option value="20172018">17/18</option>
+                    <option value="20162017">16/17</option>
+                    <option value="20152016">15/16</option>
+                </select>
+                <button id="add-team">Add Team</button>
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="pts">Points</option>
+                    <option value="name">Name</option>
+                    <option value="gamesPlayed">Games Played</option>
+                    <option value="wins">Wins</option>
+                    <option value="losses">Losses</option>
+                    <option value="ot">OT</option>
+                </select>
+                <button id="sort-btn">Sort</button>
+                <button id="clear-btn">Clear Table</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table id="stats-table" class="table">
+                    <th>Team</th>
+                    <th>GP</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>OT</th>
+                    <th>PTS</th>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -79,8 +107,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-</body>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
