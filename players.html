@@ -18,11 +18,11 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Teams <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link" href="players.html">Players</a>
+              <a class="nav-link" href="index.html">Teams <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Players</a>
             </li>
           </ul>
         </div>
@@ -72,15 +72,19 @@
                     <option value="20162017">16/17</option>
                     <option value="20152016">15/16</option>
                 </select>
-                <button id="add-team">Add Team</button>
+                <label for="player-select">Player:</label>
+                <select id="player-select">
+
+                </select>
+                <button id="add-player">Add Player</button>
                 <label for="sort-by">Sort By:</label>
                 <select id="sort-by">
-                    <option value="pts">Points</option>
+                    <option value="goals">Goals</option>
                     <option value="name">Name</option>
                     <option value="gamesPlayed">Games Played</option>
-                    <option value="wins">Wins</option>
-                    <option value="losses">Losses</option>
-                    <option value="ot">OT</option>
+                    <option value="assists">Assists</option>
+                    <option value="shots">Shots</option>
+                    <option value="hits">Hits</option>
                 </select>
                 <button id="sort-btn">Sort</button>
                 <button id="clear-btn">Clear Table</button>
@@ -89,12 +93,12 @@
         <div class="row">
             <div class="col-12">
                 <table id="stats-table" class="table">
-                    <th>Team</th>
+                    <th>Name</th>
                     <th>GP</th>
-                    <th>W</th>
-                    <th>L</th>
-                    <th>OT</th>
-                    <th>PTS</th>
+                    <th>Goals</th>
+                    <th>Assists</th>
+                    <th>Shots</th>
+                    <th>Hits</th>
                 </table>
             </div>
         </div>
@@ -107,7 +111,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script src="teamCompare.js"></script>
+    <script src="playerCompare.js"></script>
 </body>
 
 </html>
